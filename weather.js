@@ -27,7 +27,7 @@ function updateUI(data) {
   const pressure = data.main.pressure;
 
   document.getElementById("location").textContent = city;
-  document.getElementById("weather-icon").src = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+  document.getElementById("weather-icon").src = 'weather.png';
   document.getElementById("temperature").textContent = `${temp}°C`;
   document.getElementById("humidity").textContent = `Humidity: ${humidity}%`;
   document.getElementById("wind").textContent = `Wind: ${windSpeed} m/s`;
@@ -57,7 +57,7 @@ function updateForecast(data) {
     const day = date.toLocaleDateString("en-US", { weekday: 'short' }); // Get weekday (e.g., Mon)
     const highTemp = Math.round(dayData.temp.max);
     const lowTemp = Math.round(dayData.temp.min);
-    const weatherIcon = `http://openweathermap.org/img/wn/${dayData.weather[0].icon}@2x.png`; // Get weather icon for forecast day
+    const weatherIcon = `weather.png`; // Get weather icon for forecast day
 
     // Create a new list item for each forecast day
     const forecastItem = document.createElement("li");
@@ -79,7 +79,7 @@ function updateForecast(data) {
     const day = date.toLocaleDateString("en-US", { weekday: 'short' }); // Get weekday (e.g., Mon)
     const highTemp = Math.round(dayData.temp.max);
     const lowTemp = Math.round(dayData.temp.min);
-    const weatherIcon = `http://openweathermap.org/img/wn/${dayData.weather[0].icon}@2x.png`; // Get weather icon for forecast day
+    const weatherIcon = `weather.png`; // Get weather icon for forecast day
 
     // Create a new list item for each forecast day
     const forecastItem = document.createElement("li");
